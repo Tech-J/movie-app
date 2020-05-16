@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { Container, Row, Col, Jumbotron, ListGroup,
-  ListGroupItem } from "reactstrap";
+import { Container, Row } from "reactstrap";
 
 import axios from "axios";
 import CreditsCard from "../components/CreditsCard";

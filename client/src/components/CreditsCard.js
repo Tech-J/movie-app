@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Card, CardImg, CardBody,
-  CardTitle, CardSubtitle, Col, Row, Media
-} from 'reactstrap';
+import { Col, Media } from 'reactstrap';
 
 function CreditsCard(props) {
   let {cast} = props;
