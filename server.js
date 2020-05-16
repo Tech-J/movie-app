@@ -23,7 +23,10 @@ app.get('/api/movies/:id',(req,res)=>{
       vote_count: data.data.vote_count,
       budget: data.data.budget.toLocaleString("en-US"),
       revenue: data.data.revenue.toLocaleString("en-US"),
-      cast: data.data.credits.cast,
+      cast: data.data.credits.cast.map(cast=>{
+        cast.profile_path = cast.profile_path!== null ? `https://image.tmdb.org/t/p/w500${cast.profile_path}` : 'https://img.icons8.com/cotton/2x/gender-neutral-user--v2.png'
+        return cast
+      }),
       date: data.data.release_date,
       time: data.data.runtime
     }
@@ -37,11 +40,12 @@ app.get('/api/movies/:id',(req,res)=>{
 app.get('/api/movies',(req, res)=>{
   axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${tmDB}&language=en-US`)
   .then(response => {
-    let movieArray = response.data.results.map(info=>{
+    let movieArray = response.data.results.map(movie=>{
       return{
-        title: info.original_title,
-        poster: `https://image.tmdb.org/t/p/w500/${info.poster_path}`,
-        vote: info.vote_average
+        id: movie.id,
+        title: movie.original_title,
+        poster: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
+        vote: movie.vote_average
       }
     })
     res.status(200).json(movieArray)
