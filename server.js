@@ -12,6 +12,7 @@ app.use(logger('dev'));
 //api route to 
 app.use('/api/movies',require('./routes/movies'))
 
+//deployment for production 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static(path.join(__dirname, './client/build')));
 
