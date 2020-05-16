@@ -3,10 +3,10 @@ Movie App to find current movies
 
 ## User Stories
 
--   [ ] User can see all the latest movie on the front page
+-   [X] User can see all the latest movie on the front page
 -   [ ] User scroll down to see all other movies according to release date
--   [ ] User can click on any of the movie to go to their own separate page
--   [ ] User can then see all about the movie ratings, about, actors present on each separate movie page
+-   [X] User can click on any of the movie to go to their own separate page
+-   [X] User can then see all about the movie ratings, about, actors present on each separate movie page
 
 ## Bonus features
 
