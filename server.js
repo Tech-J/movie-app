@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
-const { port } = require('./config/config');
+const  port  = process.env.PORT || 8080;
+
 const path = require('path');
 
 const app = express();
