@@ -11,7 +11,9 @@ import {
   Route
 } from "react-router-dom";
 import Home  from '../pages/Home.js';
-import  MovieShow  from '../pages/MovieShow';
+import MovieShow from '../pages/MovieShow';
+import Login from '../pages/Login';
+import SignUp from '../pages/SignUp';
 
 
 function NavBar() {
@@ -21,16 +23,22 @@ function NavBar() {
 
   return (
     <Router>
-      <Navbar color="dark" light expand="md">
+      <Navbar color="dark" light>
         <Container fluid="sm">
           <NavbarBrand href="/" className="mr-auto">The Flix</NavbarBrand>
-          <Button color="primary" className="mr-1">LogIn</Button>
-          <Button color="success">SignUp</Button>
+          <Button color="primary" className="mr-1" href="/login">LogIn</Button>
+          <Button color="success" href="/signup">SignUp</Button>
         </Container>
       </Navbar>
       <Switch>
         <Route path="/movie/:id">
           <MovieShow />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
         </Route>
         <Route path="/">
           <Home />

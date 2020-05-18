@@ -8,16 +8,16 @@ function MovieDetails(props) {
     budget, revenue, time, vote} = props.movieDetails;
   return (
     <>
-      <Col lg={4}>
-        <img width="100%" src={image} />
+      <Col lg={3} md={6}>
+        <img width="100%" src={image} className="h-100"/>
       </Col>
-      <Col lg={8}>
-        <Jumbotron height="100%">
-          <h1 className="display-3">{title}</h1>
-          <p className="lead">{description}</p>
+      <Col lg={9} md={6}>
+        <Jumbotron className="h-100">
+          <h1 className="movie_title">{title}</h1>
+          <p className="movie_description">{description}</p>
           <GenreBadges genres={genres} />
           <hr className="my-2" />
-          <ListGroup horizontal="md" width="100%">
+          <ListGroup horizontal="lg" width="100%">
             <ListGroupItem tag="a" >Budget: {`$${budget}`}</ListGroupItem>
             <ListGroupItem tag="a" >Revenue: {`$${revenue}`}</ListGroupItem>
             <ListGroupItem tag="a" >Runtime: {`${time} minutes`}</ListGroupItem>

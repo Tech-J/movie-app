@@ -6,3 +6,118 @@
   cursor: pointer;
   transform: translateY(-5px);
 }
+
+.creditsCard{
+  border:solid 2px;
+  border-radius: 5px;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+.fs-3vw{
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.fs-2vw{
+  font-size: .75rem;
+  font-weight: 300;
+}
+
+.movie_title{
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.movie_description{
+  font-size: .85rem;
+  font-weight: 300;
+}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+
+.fs-3vw{
+  font-size: .85rem;
+  font-weight: 500;
+}
+.fs-2vw{
+  font-size: .75rem;
+  font-weight: 300;
+}
+.movie_title{
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.movie_description{
+  font-size: .85rem;
+  font-weight: 300;
+}
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+.fs-3vw{
+  font-size: 1.5vw;
+}
+
+.fs-2vw{
+  font-size: 1.25vw;
+}
+
+/* .movie_title{
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.movie_description{
+  font-size: .85rem;
+  font-weight: 300;
+} */
+
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
