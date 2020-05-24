@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const UserModel = require('../../models/User');
 const config = require("config");
+const jwtSecret = process.env.jwtSecret || config.get('jwtSecret')
 const jwt = require('jsonwebtoken')
 
 router.route('/')
@@ -13,7 +14,7 @@ router.route('/')
       .then(user => {
         jwt.sign(
           { id: user.id },
-          config.get('jwtSecret'),
+          jwtSecret,
           { expiresIn: 3600 },
           (err, token) => {
             if (err) throw err;

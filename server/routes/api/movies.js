@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 const config = require("config")
-const  tmDB  = config.get("tmDB") || process.env.tmDB
+const  tmDB  = process.env.tmDB || config.get("tmDB");
 
 router.route('/')
   .get((req, res)=>{
