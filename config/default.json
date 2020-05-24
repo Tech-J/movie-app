@@ -1,5 +1,0 @@
-{
-  "mongoURI" :"mongodb://user:SEtE8ukAyEGArgQS@wocluster-shard-00-02-wbwbk.mongodb.net:27017/movies?ssl=true&replicaSet=WOCluster-shard-0&authSource=admin&retryWrites=true&w=majority",
-  "tmDB":"e42ea273d3f2716e55d7fd57b3b54283",
-  "jwtSecret":"mflix_secret"
-}
