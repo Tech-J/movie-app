@@ -1,14 +1,22 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {
   Card, CardImg, CardBody,
   CardTitle, CardLink, Badge, Col, Row
 } from 'reactstrap';
 import '../App.css'
+import { useSelector, useDispatch } from 'react-redux'
+import allActions from '../actions/index'
 
-function MovieCard(prop) {
-  let { movies } = prop;
+
+function MovieCard() {
+  const dispatch = useDispatch()
+  const { movies } = useSelector(state => state.movies)
+ 
+  useEffect(() => {
+    dispatch(allActions.movieActions.getMovies())
+  }, [])
   return( 
-    movies.map((data,idx)=>{
+    movies.length>0 && movies.map((data,idx)=>{
       return( 
         <Col key={idx} className="mb-5" xs="6" lg="3">
           <Card className="movie-card">

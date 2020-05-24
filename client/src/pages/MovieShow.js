@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { Container, Row, Col } from "reactstrap";
+
+import { Container, Row } from "reactstrap";
 
 import axios from "axios";
 import CreditsCard from "../components/CreditsCard";
 import MovieDetails from "../components/MovieDetails"
 
 function MovieShow(props) {
-  let { id } = useParams();
   const [movie, setMovie] = useState([]);
-
+  let { id } = useParams();
   const fetchData = async () => {
     let { data } = await axios.get(`/api/movies/${id}`);
     console.log(data);

@@ -8,10 +8,10 @@ function MovieDetails(props) {
     budget, revenue, time, vote} = props.movieDetails;
   return (
     <>
-      <Col lg={3} md={6}>
-        <img width="100%" src={image} className="h-100"/>
+      <Col lg={3} md={6} className="pr-lg-0">
+        <img width="100%" src={image} className="h-100" alt="No Pic"/>
       </Col>
-      <Col lg={9} md={6}>
+      <Col lg={9} md={6} className="pl-lg-0">
         <Jumbotron className="h-100">
           <h1 className="movie_title">{title}</h1>
           <p className="movie_description">{description}</p>
