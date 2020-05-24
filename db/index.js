@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const config = require("config")
-const  uri  = config.get("mongoURI") || process.env.dbURL;
+const  uri  = process.env.dbURL || config.get("mongoURI");
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
