@@ -1,5 +1,7 @@
 .movie-card{
   transition: .25s ease-in-out;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .movie-card:hover{
@@ -12,30 +14,38 @@
   border-radius: 5px;
 }
 
+.dropdown-toggle::after{
+  display: none !important;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-/* Styles */
-.fs-3vw{
-  font-size: .85rem;
-  font-weight: 500;
-}
+  /* Styles */
+  .actor-name{
+    font-size: .85rem;
+    font-weight: 500;
+  }
 
-.fs-2vw{
-  font-size: .75rem;
-  font-weight: 300;
-}
+  .actor-title{
+    font-size: .75rem;
+    font-weight: 300;
+  }
 
-.movie_title{
-  font-size: 1.75rem;
-  font-weight: 500;
-}
-.movie_description{
-  font-size: .85rem;
-  font-weight: 300;
-}
+  .movie_title{
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  .movie_description{
+    font-size: .85rem;
+    font-weight: 300;
+  }
+
+  .mobile-text{
+    font-size: 13px;
+  }
 
 }
 
@@ -57,11 +67,11 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 /* Styles */
 
-.fs-3vw{
+.actor-name{
   font-size: .85rem;
   font-weight: 500;
 }
-.fs-2vw{
+.actor-title{
   font-size: .75rem;
   font-weight: 300;
 }
@@ -96,12 +106,12 @@ and (orientation : portrait) {
 @media only screen 
 and (min-width : 1224px) {
 /* Styles */
-.fs-3vw{
-  font-size: 1.5vw;
+.actor-name{
+  font-size: 1rem;
 }
 
-.fs-2vw{
-  font-size: 1.25vw;
+.actor-title{
+  font-size: .75rem;
 }
 
 /* .movie_title{

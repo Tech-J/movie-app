@@ -9,6 +9,7 @@ import Home  from './pages/Home.js';
 import MovieShow from './pages/MovieShow';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import Results from './pages/Results'
 import NavBar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch } from 'react-redux'
@@ -23,6 +24,9 @@ function App() {
     <Router>
       <NavBar />
       <Switch>
+        <Route path="/search">
+          <Results />
+        </Route>
         <Route path="/movie/:id">
           <MovieShow />
         </Route>

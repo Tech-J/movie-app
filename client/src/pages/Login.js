@@ -11,7 +11,7 @@ function Login() {
       <Row className="vh-100 align-items-center">
         <Col sm="12" md={{ size: 6, offset: 3 }}>
           <h3 className="text-center">LogIn</h3>
-          <Form onSubmit={(e)=>dispatch(allActions.userActions.addUser(e))}>
+          <Form onSubmit={(e)=>dispatch(allActions.authActions.loginUser(e))}>
             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
               <Label for="email" className="mr-sm-2">Email</Label>
               <Input type="email" name="email" id="email" placeholder="something@idk.cool" />

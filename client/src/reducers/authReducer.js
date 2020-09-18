@@ -11,14 +11,7 @@ const auth = (state= initialState, action) =>{
       return {
         ...state,
         isLoading: true
-      };
-    case "USER_LOADED":
-      return {
-        ...state,
-        isAuthenticated: true,
-        isLoading: false,
-        user: action.payload
-      };      
+      }; 
     case "USER_LOADED":
       return {
         ...state,
@@ -27,7 +20,8 @@ const auth = (state= initialState, action) =>{
         user: action.payload
       };
     case "LOGIN_SUCCESS":
-    case "REGISTER_SUCCESS":     
+    case "REGISTER_SUCCESS":    
+    console.log(action.payload) 
       localStorage.setItem('token',action.payload.token)
       return {
         ...state,

@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Navbar,
   NavbarBrand,
-  Button,
   Container
 } from "reactstrap";
-
-
+import { useSelector } from "react-redux";
+import AuthButtons from './AuthButtons';
+import ProfileButton from "./ProfileButton";
 
 function NavBar() {
+  let {token} = useSelector(state=> state.auth)
   return (
-      <Navbar color="dark" light>
-        <Container fluid="sm">
-          <NavbarBrand href="/" className="mr-auto">The Flix</NavbarBrand>
-          <Button color="primary" className="mr-1" href="/login">LogIn</Button>
-          <Button color="success" href="/signup">SignUp</Button>
-        </Container>
-      </Navbar>
+    <Navbar color="dark" light>
+      <Container fluid="sm">
+        <NavbarBrand href="/" className="mr-auto">The Flix</NavbarBrand>
+        {
+          token!=null ? <ProfileButton/>: <AuthButtons />
+        }
+      </Container>
+    </Navbar>
   );
 }
 
